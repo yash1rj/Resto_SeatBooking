@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Yash Raj">
+        <meta name="description" content="A form to book slot for dining.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Resto_SeatBook</title>
+    </head>
+    <body>
+        <h1>Application for Dining Slot Booking</h1>
+        <form action="./confirm.html">
+            <table>
+				<tbody>
+					<tr>
+						<th align="right">Visitor Name :</th>
+						<td><input type="text" autofocus required pattern="[a-zA-Z]+" maxlength="20"></td>
+					</tr>
+					<tr>
+						<th align="right">Number Of Members :</th>
+						<td><input type="number" min="1" max="99" maxlength="2"></td>
+					</tr>
+					<tr>
+						<th align="right">Contact No. :</th>
+						<td><input type="number" required pattern="[0-9]" minlength="10" maxlength="10"></td>
+					</tr>
+					<tr>
+						<th align="right">Email :</th>
+						<td><input type="email"></td>
+					</tr>
+					<tr>
+						<th align="right">Type Of Food :</th>
+                        <td>
+                            South Indian<input type="checkbox" name="south" checked>
+                            North Indian<input type="checkbox"  name="north">
+                            Chinese<input type="checkbox"  name="chinese">
+							Western<input type="checkbox"  name="western">
+                        </td>
+					</tr>
+					<tr>
+						<th align="right">Room Status :</th>
+						<td>
+							AC<input type="radio" name="airC" required checked>
+                            Non-AC<input type="radio"  name="airC" required>
+						</td>
+					</tr>
+					<tr>
+						<th align="right"><label for="lst">Venue Preference :</label></th>
+						<td><input list="country" id="lst">
+							<datalist id="country">
+								<option name="Arena">Arena</option>
+								<option name="Fiesta">Fiesta</option>
+								<option name="Vista">Vista</option>
+								<option name="Mythri">Mythri</option>
+								<option name="Magna">Magna</option>
+								<option name="Oasis">Oasis</option>
+								<option name="Amoeba">Amoeba</option>
+							</datalist>
+						</td>
+					</tr>
+					<tr>
+						<th><input type="reset"></th>
+						<td><input type="submit"></td>
+					</tr>
+				</tbody>
+			</table>    
+        </form>
+    </body>
+</html>

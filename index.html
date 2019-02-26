@@ -4,67 +4,102 @@
         <meta charset="UTF-8">
         <meta name="author" content="Yash Raj">
         <meta name="description" content="A form to book slot for dining.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="./styler.css">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
         <title>Resto_SeatBook</title>
     </head>
     <body>
-        <h1>Application for Dining Slot Booking</h1>
-        <form action="./confirm.html">
-            <table>
-				<tbody>
-					<tr>
-						<th align="right">Visitor Name :</th>
-						<td><input type="text" autofocus required pattern="[a-zA-Z]+" maxlength="20"></td>
-					</tr>
-					<tr>
-						<th align="right">Number Of Members :</th>
-						<td><input type="number" min="1" max="99" maxlength="2"></td>
-					</tr>
-					<tr>
-						<th align="right">Contact No. :</th>
-						<td><input type="number" required pattern="[0-9]" minlength="10" maxlength="10"></td>
-					</tr>
-					<tr>
-						<th align="right">Email :</th>
-						<td><input type="email"></td>
-					</tr>
-					<tr>
-						<th align="right">Type Of Food :</th>
-                        <td>
-                            South Indian<input type="checkbox" name="south" checked>
-                            North Indian<input type="checkbox"  name="north">
-                            Chinese<input type="checkbox"  name="chinese">
-							Western<input type="checkbox"  name="western">
-                        </td>
-					</tr>
-					<tr>
-						<th align="right">Room Status :</th>
-						<td>
-							AC<input type="radio" name="airC" required checked>
-                            Non-AC<input type="radio"  name="airC" required>
-						</td>
-					</tr>
-					<tr>
-						<th align="right"><label for="lst">Venue Preference :</label></th>
-						<td><input list="country" id="lst">
-							<datalist id="country">
-								<option name="Arena">Arena</option>
-								<option name="Fiesta">Fiesta</option>
-								<option name="Vista">Vista</option>
-								<option name="Mythri">Mythri</option>
-								<option name="Magna">Magna</option>
-								<option name="Oasis">Oasis</option>
-								<option name="Amoeba">Amoeba</option>
-							</datalist>
-						</td>
-					</tr>
-					<tr>
-						<th><input type="reset"></th>
-						<td><input type="submit"></td>
-					</tr>
-				</tbody>
-			</table>    
-        </form>
+		<div class="container-fluid jumbotron jumbotron-fluid bg-dark text-white" id="topdiv">
+			<img src="./restoview.jpg" class="img-fluid" alt="Resto View" width="100%" id="restobanner">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h1 class="display-4 text-center">Application for Dining Slot Booking</h1>
+				<br /><br />
+				<form action="./confirm.html">
+					<table align="center">
+						<tbody>
+							<tr>
+								<th class="text-right">Visitor Name :</th>
+								<td><input type="text" class="form-control" autofocus required pattern="[a-zA-Z]+" maxlength="20"></td>
+							</tr>
+							<tr>
+								<th class="text-right">Number Of Members :</th>
+								<td><input type="number" class="form-control" min="1" max="99" maxlength="2"></td>
+							</tr>
+							<tr>
+								<th class="text-right">Contact No. :</th>
+								<td><input type="number" class="form-control" required pattern="[0-9]" minlength="10" maxlength="10"></td>
+							</tr>
+							<tr>
+								<th class="text-right">Email :</th>
+								<td><input type="email" class="form-control"></td>
+							</tr>
+							<tr>
+								<th class="text-right">Type Of Food :</th>
+								<td>
+									<div class="custom-control custom-switch">
+										<input class="custom-control-input" type="checkbox" name="south" id="inlineCheckbox1" value="option1">
+										<label class="custom-control-label" for="inlineCheckbox1">South Indian</label> 
+									</div>
+									<div class="custom-control custom-switch">
+										<input class="custom-control-input" type="checkbox" name="north" id="inlineCheckbox2" value="option2" checked>
+										<label class="custom-control-label" for="inlineCheckbox2">North Indian</label> 
+									</div>
+									<div class="custom-control custom-switch">
+										<input class="custom-control-input" type="checkbox" name="chinese" id="inlineCheckbox3" value="option3">
+										<label class="custom-control-label" for="inlineCheckbox3">Chinese</label> 
+									</div>
+									<div class="custom-control custom-switch">
+										<input class="custom-control-input" type="checkbox" name="western" id="inlineCheckbox4" value="option4">
+										<label class="custom-control-label" for="inlineCheckbox4">Western</label> 
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">Room Status :</th>
+								<td>
+									<div class="custom-control custom-radio">
+										<input type="radio" name="airC" required checked id="inlineRadio1" value="option1" class="custom-control-input">
+										<label class="custom-control-label" for="inlineRadio1">AC</label>
+									</div>
+									<div class="custom-control custom-radio">
+										<input type="radio" name="airC" required id="inlineRadio2" value="option2" class="custom-control-input">
+										<label class="custom-control-label" for="inlineRadio2">Non-AC</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right"><label for="lst">Venue Preference :</label></th>
+								<td>
+									<select class="custom-select" id="country">
+										<option name="Arena">Arena</option>
+										<option name="Fiesta">Fiesta</option>
+										<option name="Vista">Vista</option>
+										<option name="Mythri">Mythri</option>
+										<option name="Magna">Magna</option>
+										<option name="Oasis">Oasis</option>
+										<option name="Amoeba">Amoeba</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th class="text-right"><input type="reset" class="btn btn-outline-danger font-weight-bold"></th>
+								<td class="text-center"><input type="submit" class="btn btn-outline-primary font-weight-bold"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

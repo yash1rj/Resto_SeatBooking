@@ -23,11 +23,11 @@
 						<tbody>
 							<tr>
 								<th class="text-right">Visitor Name :</th>
-								<td><input type="text" class="form-control" autofocus required pattern="[a-zA-Z]+" maxlength="20"></td>
+								<td><input id="visName" type="text" class="form-control" autofocus required pattern="[a-zA-Z]+" maxlength="20"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Number Of Members :</th>
-								<td><input type="number" class="form-control" min="1" max="99" maxlength="2"></td>
+								<td><input id="ttlMems" type="number" class="form-control" min="1" max="99" maxlength="2"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Contact No. :</th>
@@ -40,21 +40,23 @@
 							<tr>
 								<th class="text-right">Type Of Food :</th>
 								<td>
-									<div class="custom-control custom-switch">
-										<input class="custom-control-input" type="checkbox" name="south" id="inlineCheckbox1" value="option1">
-										<label class="custom-control-label" for="inlineCheckbox1">South Indian</label> 
-									</div>
-									<div class="custom-control custom-switch">
-										<input class="custom-control-input" type="checkbox" name="north" id="inlineCheckbox2" value="option2" checked>
-										<label class="custom-control-label" for="inlineCheckbox2">North Indian</label> 
-									</div>
-									<div class="custom-control custom-switch">
-										<input class="custom-control-input" type="checkbox" name="chinese" id="inlineCheckbox3" value="option3">
-										<label class="custom-control-label" for="inlineCheckbox3">Chinese</label> 
-									</div>
-									<div class="custom-control custom-switch">
-										<input class="custom-control-input" type="checkbox" name="western" id="inlineCheckbox4" value="option4">
-										<label class="custom-control-label" for="inlineCheckbox4">Western</label> 
+									<div id="foodType">
+										<div class="custom-control custom-switch">
+											<input class="custom-control-input" type="checkbox" name="south" id="inlineCheckbox1" value="option1">
+											<label class="custom-control-label" for="inlineCheckbox1">South Indian</label> 
+										</div>
+										<div class="custom-control custom-switch">
+											<input class="custom-control-input" type="checkbox" name="north" id="inlineCheckbox2" value="option2" checked>
+											<label class="custom-control-label" for="inlineCheckbox2" id="defFood">North Indian</label> 
+										</div>
+										<div class="custom-control custom-switch">
+											<input class="custom-control-input" type="checkbox" name="chinese" id="inlineCheckbox3" value="option3">
+											<label class="custom-control-label" for="inlineCheckbox3">Chinese</label> 
+										</div>
+										<div class="custom-control custom-switch">
+											<input class="custom-control-input" type="checkbox" name="western" id="inlineCheckbox4" value="option4">
+											<label class="custom-control-label" for="inlineCheckbox4">Western</label> 
+										</div>
 									</div>
 								</td>
 							</tr>
@@ -63,7 +65,7 @@
 								<td>
 									<div class="custom-control custom-radio">
 										<input type="radio" name="airC" required checked id="inlineRadio1" value="option1" class="custom-control-input">
-										<label class="custom-control-label" for="inlineRadio1">AC</label>
+										<label class="custom-control-label" for="inlineRadio1" id="roomStat">AC</label>
 									</div>
 									<div class="custom-control custom-radio">
 										<input type="radio" name="airC" required id="inlineRadio2" value="option2" class="custom-control-input">
@@ -91,11 +93,14 @@
 							</tr>
 							<tr>
 								<th class="text-right"><input type="reset" class="btn btn-outline-danger font-weight-bold"></th>
-								<td class="text-center"><input type="submit" class="btn btn-outline-primary font-weight-bold"></td>
+								<td class="text-center"><input id="subM" type="submit" class="btn btn-outline-primary font-weight-bold"></td>
 							</tr>
 						</tbody>
 					</table>
 				</form>
+				<br><br>
+				<hr />
+				<div id="output"></div>
 			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
